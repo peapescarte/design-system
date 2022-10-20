@@ -1,0 +1,26 @@
+.dark-doc .docs-story {
+  background-color: #212121;
+}
+
+.docs-story .innerZoomElementWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.flag {
+  display: inline-box;
+
+  width: fit-content;
+  margin: 4px;
+  padding: 4px 12px;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+}
+
+.flag.-need {
+  background: firebrick;
+
+  color: white;
+}

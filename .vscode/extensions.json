@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "dbaeumer.vscode-eslint",
+    "voorjaar.windicss-intellisense",
+    "csstools.postcss",
+    "esbenp.prettier-vscode",
+    "vivaxy.vscode-conventional-commits",
+    "aaron-bond.better-comments",
+    "formulahendry.auto-close-tag",
+    "wix.vscode-import-cost",
+    "syler.sass-indented",
+    "streetsidesoftware.code-spell-checker",
+    "ZixuanChen.vitest-explorer"
+  ]
+}

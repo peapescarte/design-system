@@ -1,0 +1,71 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+
+import Colors from './tokens/Colors.vue'
+import AtomicTypograph from './tokens/AtomicTypograph.vue'
+import Fonts from './tokens/Fonts.vue'
+import Shadow from './tokens/Shadows.vue'
+
+import Borders from './tokens/Borders.vue'
+
+import './tokens/tokens-doc.scss'
+
+<Meta
+  title="Introdução/Tokens"
+  component={Colors}
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+export const Template = ({ token }) => ({
+  components: { Colors, AtomicTypograph, Fonts, Shadow, Borders },
+  setup() {
+    return { token }
+  },
+  template: `<component :is="token"/>`,
+})
+
+# Design tokens
+
+<Story name="Cores" args={{ token: 'Colors' }}>
+  {Template.bind()}
+</Story>
+
+<Story name="Fonts" args={{ token: 'Fonts' }}>
+  {Template.bind()}
+</Story>
+
+<!--
+<Story name="Tipografia-Atomica" args={{ token: 'AtomicTypograph' }}>
+  {Template.bind()}
+</Story>
+-->
+
+<Story name="Sombras" args={{ token: 'Shadow' }}>
+  {Template.bind()}
+</Story>
+
+<Story name="Bordas" args={{ token: 'Borders' }}>
+  {Template.bind()}
+</Story>
+
+## Icones
+
+Para definir o tamanho do icone você pode aplicar a classe nele:
+
+| valor             | tamanho |
+| ----------------- | ------- |
+| icon-size-small   | 16px    |
+| icon-size-medium  | 24px    |
+| icon-size-large   | 32px    |
+| icon-size-x-large | 40px    |
+| icon-size-giga    | 48px    |
+
+Exemplo: 
+
+```html dark
+<Icon class="icon-size-small">
+```

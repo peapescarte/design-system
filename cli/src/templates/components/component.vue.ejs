@@ -1,0 +1,33 @@
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    id: string
+    label?: string
+  }>(),
+  {
+    label: 'Teste',
+  },
+)
+
+const emit =
+  defineEmits<{
+    (e: 'change', value: string): void
+  }>()
+</script>
+
+<template>
+  <div
+    :id="`<%- props.nameClass %>-${id}`"
+    :data-testid="`<%- props.nameClass %>-${id}`"
+    class="sol-<%- props.nameClass %>-core"
+    @focusin="emit('change', 'teste')"
+  >
+    {{ label }}
+  </div>
+</template>
+
+<style lang="scss">
+.sol-<%- props.nameClass %>-core {
+  @apply bg-brand-primary-medium px-2xs;
+}
+</style>

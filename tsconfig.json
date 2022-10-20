@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+
+    "skipLibCheck": true,
+
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "useDefineForClassFields": true,
+
+    "outDir": "dist",
+    "declaration": true,
+
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "unplugin-icons/types/vue", "vitest/globals"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@forms/*": ["./src/components/forms/*"],
+      "@themes/*": ["./theme/*"],
+      "@composables/*": ["./src/composables/*"],
+    }
+  },
+
+  "exclude": [
+    "dist",
+    "node_modules",
+    "src/App.vue",
+    "src/main.ts",
+    "src/stories",
+    "theme",
+    "storybook-static"
+  ]
+}

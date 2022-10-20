@@ -1,0 +1,9 @@
+dist
+public
+storybook-static
+cli
+src/stories
+*.json
+*.ejs
+readme.md
+.github/workflows

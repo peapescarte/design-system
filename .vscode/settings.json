@@ -1,0 +1,33 @@
+{
+  "cSpell.words": [
+    "antfu",
+    "attributify",
+    "composables",
+    "describedby",
+    "esnext",
+    "gluegun",
+    "iconify",
+    "IIFE",
+    "informations",
+    "maska",
+    "nuxt",
+    "pescarte",
+    "Pescarte",
+    "textfield",
+    "Textfield",
+    "theming",
+    "unplugin",
+    "vitejs",
+    "vitest",
+    "vue",
+    "vue.js",
+    "vuejs",
+    "vueuse",
+    "windi",
+    "windicss"
+  ],
+  "prettier.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+}

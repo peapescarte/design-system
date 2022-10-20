@@ -1,0 +1,12 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+
+*.tgz
+*.log
+*.local
+.dccache
+
+coverage
+storybook-static

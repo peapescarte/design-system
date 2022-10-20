@@ -1,0 +1,10 @@
+import type { App } from 'vue'
+import Pea<%- props.name %> from './<%- props.name %>.vue'
+
+Pea<%- props.name %>.install = (app: App) => {
+  app.component('Pea<%- props.name %>', Pea<%- props.name %>)
+}
+
+export {
+  Pea<%- props.name %>,
+}

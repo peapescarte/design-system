@@ -1,0 +1,35 @@
+h1 {
+  @apply fonts-display-small;
+}
+
+[id^="story--introdução-tokens"] {
+  @apply mb-sm;
+}
+
+.story-title {
+  @apply fonts-heading-h1;
+  @apply mb-6;
+}
+
+.story-subtitle {
+  @apply fonts-heading-h2;
+  @apply mb-6;
+}
+
+.story-internal-title {
+  @apply text-xs mb-6 font-bold font-highlight;
+}
+
+.properties-information {
+  @apply flex flex-col mb-6;
+
+  > .property-variant {
+    @apply my-1;
+  }
+
+  > .property-variant > .code {
+    @apply bg-highlight-medium 
+      py-1 px-1 rounded-sm
+      font-code font-bold;
+  }
+}

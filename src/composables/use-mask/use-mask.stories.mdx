@@ -1,0 +1,185 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import { action } from '@storybook/addon-actions'
+
+
+import { computed } from 'vue'
+
+import InputText from '@forms/inputs/input-text/InputText.vue'
+
+<Meta
+  title="Composables/useMask"
+  component={InputText}
+  argTypes={{
+    mask: {
+      control: { type: 'text' },
+      defaultValue: ''
+    },
+    preset: {
+      control: { type: 'radio' },
+      options: [
+        'CPF',
+        'CNPJ',
+        'CPF_CNPJ',
+        'MobilePhoneDDD',
+        'none',
+      ],
+      defaultValue: 'none'
+    },
+  }}
+/>
+
+export const Template = (args) => ({
+  components: { InputText },
+  setup() {
+    const maskv = computed(() => args?.preset !== 'none' ? ({ preset: args?.preset }) : args.mask)
+    return { args, maskv }
+  },
+  template: `
+    <InputText v-bind="args" :mask="maskv">
+    </InputText>
+  `,
+})
+
+# useMask
+
+## Se você usa o [InputText](/docs/componentes-forms-inputs-inputtext--default-story)
+No [InputText](/docs/componentes-forms-inputs-inputtext--default-story) já vem instalado por padrão, basta usar a prop `mask`.
+
+```html dark
+<template>
+  <PeaInputText id="cpf" :mask="{ preset: 'CPF' }">
+
+  <PeaInputText id="cnpj" :mask="{ preset: 'CNPJ' }">
+
+  <PeaInputText id="cpf-cnpj" :mask="{ preset: 'CPF_CNPJ' }">
+
+  <PeaInputText id="mobile-phone-ddd" :mask="{ preset: 'MobilePhoneDDD' }">
+
+  <PeaInputText id="custom-1" mask="##/##/####">
+
+  <PeaInputText id="custom-2" mask="###.###,##">
+</teamplte>
+```
+
+
+
+## Se você usa o input nativo do HTML
+
+Caso você usa o input nativo ou qualquer outro componente que não tem suporte por padrão a prop `mask`,
+você pode instanciar o composable e criar seu proprio suporte a mascaras.
+
+
+```html dark
+<script lang="ts" setup>
+// FIXME
+import type { Mask } from '@pescarte/xxxx'
+import { useMask } from '@pescarte/xxxx'
+
+/*
+  O parâmetro passado pasa o `useMask` abaixo (`props.mask`) é para garantir o funcionamento dos presets caso os use.
+  O vMask deve é usado automaticamente pelo Vue no *script setup* como uma diretiva.
+*/
+const { maskValue, vMask } = useMask(props.mask)
+
+</script>
+
+
+<template>
+<!-- ...... -->
+<input v-mask="maskValue" />
+<!-- ...... -->
+</template>
+```
+
+## Aplicação nos Inputs
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      id: 'default',
+      name: 'default',
+      disabled: false,
+      placeholder: 'Digite',
+      required: false,
+      mask: '##/##/####'
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `
+            <PeaInputText mask="##/##/###" id="default" name="default" label="Label" placeholder="Digite aqui" />
+          `,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="PresetCPF"
+    args={{
+      id: 'PresetCPF',
+      name: 'default',
+      disabled: false,
+      placeholder: 'Digite CPF',
+      required: false,
+      preset: 'CPF'
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `
+            <PeaInputText :mask="{ preset: 'CPF' }" id="default" name="default" label="Label" placeholder="Digite aqui CPF" />
+          `,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+    <Story
+    name="PresetCNPJ"
+    args={{
+      id: 'PresetCNPJ',
+      name: 'default',
+      disabled: false,
+      placeholder: 'Digite CNPJ',
+      required: false,
+      preset: 'CNPJ'
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `
+            <PeaInputText :mask="{ preset: 'CNPJ' }" id="default" name="default" label="Label" placeholder="Digite aqui CNPJ" />
+          `,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+    <Story
+    name="PresetCPF_CNPJ"
+    args={{
+      id: 'PresetCPF_CNPJ',
+      name: 'default',
+      disabled: false,
+      placeholder: 'Digite CPF_CNPJ',
+      required: false,
+      preset: 'CPF'
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `
+            <PeaInputText :mask="{ preset: 'CPF_CNPJ' }" id="default" name="default" label="Label" placeholder="Digite aqui CPF_CNPJ" />
+          `,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

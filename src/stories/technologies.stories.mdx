@@ -1,0 +1,98 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+
+<Meta title="Introdução/Tecnologias" />
+
+# Padrões
+
+## RSCSS
+
+É uma metodologia CSS visa estruturar o CSS com boas praticas e simplicidades, evitando grandes nomeclaturas e choques de CSS;
+
+- <a href="https://rscss.io/" target="_blank">Documentação oficial</a>
+- <a href="https://willianjusten.com.br/falando-sobre-rscss" target="_blank">Artigo do Willian Justen</a>
+
+# Tecnologias
+
+## CSS e Estilos
+
+### Sass
+
+É um pré-processador de css com objetivo de aumentar a produtividade de escrever css, trazendo features que afim de melhorar a organização e escrever menos código.
+
+Conteúdos de apoio:
+
+- <a href="https://sass-lang.com/" target="_blank">Documentação oficial</a>
+
+### Windicss
+
+É um framework CSS no padrão de Utilities-First;
+Nos utilizamos ele como uma camada principal em cima do nosso Design-system aproveitando seus conceito de utilitários e
+aplicamos nossas configurações e tokens para personalizar como um tema;
+
+Conteúdos de apoio:
+
+- <a href="https://windicss.org/guide/" target="_blank">Documentação oficial</a>
+
+
+## Testes 
+
+### Testing library
+
+Um framework que atua como uma camada em cima dos testes unitários, entregando alguns utilitários e facilitando a escrita dos testes;
+
+Conteúdos de apoio:
+
+- <a href="https://testing-library.com/docs/vue-testing-library/intro" target="_blank">Documentação oficial</a>
+
+### Vitest
+
+É um test-runner construido pela vite, especialmente para o vitejs. Ele compartilha as configurações do vite com vitest e tem uma API semelhante ao Jest.
+Como é um novo test-runner construido do zero, ele traz todos os beneficios da nova geração, se tornando muito mais rápido que o Jest, e tendo suporte completo a ESM, typescript e modular ao ponto de optar pelo happy-dom.
+
+- <a href="https://vitest.dev/" target="_blank">Documentação oficial</a>
+
+## Outras bibliotecas
+
+### Typescript
+
+É um conjunto de ferramentas em cima do *Javascript* que adiciona tipagem estática e diversos novos recursos do *Javascript*. 
+Ele nós permite documentar melhor nosso código, através dos tipos; garantir mais segurança em nosso código, através de análise em runtime; Ter um intelisense/autocomplete inteligente melhorando nossa produtividade.
+
+Conteúdos de apoio:
+
+- <a href="https://www.typescriptlang.org/docs/handbook/intro.html" target="_blank">Documentação oficial</a>
+- <a href="https://willianjusten.com.br/mini-curso-gratuito-de-typescript" target="_blank">Curso gratuito de Typescript - Willian Justen</a>
+- <a href="https://www.youtube.com/watch?v=0mYq5LrQN1s" target="_blank">Typescript de forma prática - Rocketseat</a>
+
+### Vite - Bundler
+
+É um bundler/Build tools com 100% de suporte a Typescript, pré-compiçado em ESBuild (consrtuído em Go) que o faz extremamente rápido (100x mais rápido que o webpack 4).
+Ele é completamente extensível e já conta com gama de plugins e eco-sistema próprio para suprir as diversas demandas.
+
+Conteúdos de apoio:
+
+- <a href="https://vitejs.dev/guide/#overview" target="_blank">Documentação oficial</a>
+- <a href="https://vitejs.dev/plugins/" target="_blank">Plugins</a>
+
+### VueUse - Composables
+
+É uma coleção de funções utilitárias (como o caso do click-outside) com base no _composable API_ para simplificar o desenvolvimento do sistema;
+
+Conteúdos de apoio:
+
+- <a href="https://vueuse.org" target="_blank">Documentação oficial</a>
+
+
+### Unplugin Icons (Sistema de icones)
+
+Para acessar inúmeros icones como componentes sob-demanda.
+Aqui você consegue importar e ter um intelisense sobre icones e usa-los de modo simplificado, ele é renderizado como svg no DOM, 
+também é facilmente customizavel passando classes para alterar a cor, tamanho.
+
+É altamente recomendavél instalar a extenssão:
+<a href="https://marketplace.visualstudio.com/items?itemName=antfu.iconify" target="_blank">Iconify IntelliSense</a>
+
+Conteúdos de apoio:
+- <a href="https://github.com/antfu/unplugin-icons" target="_blank">Documentação oficial</a>
+- <a href="https://icones.js.org/" target="_blank">Navegar sobre os inúmeros icones</a>
+

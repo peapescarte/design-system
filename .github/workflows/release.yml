@@ -1,0 +1,57 @@
+name: Build and Deploy Boia Beta
+
+on:
+  push:
+    branches:
+      - "beta/**"
+
+jobs:
+  settings:
+    name: Configure git and  caches
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure git
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: node_modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.9
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run linters
+        run: yarn lint
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Building Storybook
+        run: yarn build-storybook
+
+      - name: Deploy Docs
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: storybook-static
+          CLEAN: true
+          TARGET_FOLDER: .
+
+      - name: Building Boia beta   
+        run: yarn build:lib:ts
+
+      - name: Deploy on beta NPM
+        run: npm publish --access public --tag beta
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
