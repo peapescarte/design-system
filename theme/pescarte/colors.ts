@@ -28,4 +28,10 @@ export default {
       dark: '#f5f5f5',
     },
   },
+
+  feedback: {
+    positive: '#00b464',
+    negative: '#fa3232',
+    warning: '#ffcb32',
+  },
 }
