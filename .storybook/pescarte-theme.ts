@@ -11,6 +11,6 @@ export default create({
   textColor: '#FAFAFA',
 
   brandTitle: 'DesignSystem',
-  // FIXME
-  brandImage: '../public/xxxx.svg',
+
+  brandImage: '../public/design-system.svg',
 });
