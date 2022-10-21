@@ -48,7 +48,7 @@ jobs:
           CLEAN: true
           TARGET_FOLDER: .
 
-      - name: Building Boia
+      - name: Building DesignSystem
         run: yarn build:lib:ts
 
       - name: Deploy on NPM

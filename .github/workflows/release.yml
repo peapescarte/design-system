@@ -1,4 +1,4 @@
-name: Build and Deploy Boia Beta
+name: Build and Deploy DesignSystem Beta
 
 on:
   push:
@@ -48,7 +48,7 @@ jobs:
           CLEAN: true
           TARGET_FOLDER: .
 
-      - name: Building Boia beta   
+      - name: Building DesignSystem beta   
         run: yarn build:lib:ts
 
       - name: Deploy on beta NPM

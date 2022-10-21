@@ -10,7 +10,7 @@ export default create({
 
   textColor: '#FAFAFA',
 
-  brandTitle: 'Boia',
+  brandTitle: 'DesignSystem',
   // FIXME
   brandImage: '../public/xxxx.svg',
 });
