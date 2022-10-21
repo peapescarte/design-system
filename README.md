@@ -3,40 +3,40 @@
 </div>
 
 
-![Release](https://github.com/peapescarte/boia/actions/workflows/release.yml/badge.svg)
+![Release](https://github.com/peapescarte/design-system/actions/workflows/release.yml/badge.svg)
 
 
 <div style="flex">
-  <a href="https://npm.im/@pescarte/boia" target="_blank">
-    <img src="https://img.shields.io/npm/v/@pescarte/boia.svg" />
+  <a href="https://npm.im/@pescarte/design-system" target="_blank">
+    <img src="https://img.shields.io/npm/v/@pescarte/design-system.svg" />
   </a>
 
-  <a href="https://npm.im/@pescarte/boia" target="_blank">
-    <img src="https://img.shields.io/npm/types/@pescarte/boia.svg" />
+  <a href="https://npm.im/@pescarte/design-system" target="_blank">
+    <img src="https://img.shields.io/npm/types/@pescarte/design-system.svg" />
   </a>
 
-  <a href="https://npm.im/@pescarte/boia" target="_blank">
+  <a href="https://npm.im/@pescarte/design-system" target="_blank">
     <img src="https://badgen.net/badge/node/v16.17/74b758?icon=npm" />
   </a>
 
-  <a href="https://npm.im/@pescarte/boia" target="_blank">
+  <a href="https://npm.im/@pescarte/design-system" target="_blank">
     <img src="https://badgen.net/badge/typescript/v4.6.3/1081c2?icon=typescript" />
   </a>
 
-  <a href="https://npm.im/@pescarte/boia" target="_blank">
+  <a href="https://npm.im/@pescarte/design-system" target="_blank">
     <img src="https://badgen.net/badge/vue.js/v3.2.40/42b883" />
   </a>
 
-  <a href="https://bundlephobia.com/result?p=@pescarte/boia" target="_blank">
-    <img src="https://badgen.net/bundlephobia/min/@pescarte/boia" />
+  <a href="https://bundlephobia.com/result?p=@pescarte/design-system" target="_blank">
+    <img src="https://badgen.net/bundlephobia/min/@pescarte/design-system" />
   </a>
 
-  <a href="https://bundlephobia.com/result?p=@pescarte/boia" target="_blank">
-    <img src="https://badgen.net/bundlephobia/minzip/@pescarte/boia" />
+  <a href="https://bundlephobia.com/result?p=@pescarte/design-system" target="_blank">
+    <img src="https://badgen.net/bundlephobia/minzip/@pescarte/design-system" />
   </a>
 
-  <a href="https://bundlephobia.com/result?p=@pescarte/boia" target="_blank">
-    <img src="https://badgen.net/bundlephobia/tree-shaking/@pescarte/boia" />
+  <a href="https://bundlephobia.com/result?p=@pescarte/design-system" target="_blank">
+    <img src="https://badgen.net/bundlephobia/tree-shaking/@pescarte/design-system" />
   </a>
 </div>
 
@@ -59,7 +59,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 Basta executar:
 ```bash dark
-yarn add @pescarte/boia
+yarn add @pescarte/design-system
 ```
 
 e colocar no `scripts` dentro do `package.json` para ter acesso ao nosso CLI:
@@ -67,14 +67,14 @@ e colocar no `scripts` dentro do `package.json` para ter acesso ao nosso CLI:
 ```json dark
 {
   "scripts": {
-    "boia-cli": "boia-cli"
+    "design-system-cli": "design-system-cli"
   }
 }
 ```
 
 # 👷 Como usar
 
-Após fazer o processo de instalação, você deve executar `yarn boia-cli generate:plugin`.
+Após fazer o processo de instalação, você deve executar `yarn design-system-cli generate:plugin`.
 
 Isto irá configura o plugin no seu projeto e estará pronto para usar, sem a necessidade de importar os componentes, só necessitando importar os composables com a necessidade.
 

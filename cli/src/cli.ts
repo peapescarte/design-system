@@ -6,9 +6,9 @@ import { build } from 'gluegun'
 async function run(argv: any) {
   // create a CLI runtime
   const cli = build()
-    .brand('boia-cli')
+    .brand('design-system-cli')
     .src(__dirname)
-    .plugins('../node_modules', { matching: 'boia-cli*', hidden: true })
+    .plugins('../node_modules', { matching: 'design-system-cli*', hidden: true })
     .help() // provides default for help, h, --help, -h
     .version() // provides default for version, v, --version, -v
     .create()

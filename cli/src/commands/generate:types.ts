@@ -3,7 +3,7 @@ const RELATIVE_ROOT_PROJECT = './'
 
 export default {
   name: 'generate:types',
-  description: 'Setting boia global plugin to nuxt/vue',
+  description: 'Setting design-system global plugin to nuxt/vue',
   run: async (toolbox: GluegunToolbox) => {
     const {
       parameters,

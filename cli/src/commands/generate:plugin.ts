@@ -4,7 +4,7 @@ const RELATIVE_ROOT_PROJECT = './'
 
 module.exports = {
   name: 'generate:plugin',
-  description: 'Setting boia global plugin to nuxt/vue',
+  description: 'Setting design-system global plugin to nuxt/vue',
   run: async (toolbox: GluegunToolbox) => {
     const {
       parameters,
@@ -18,10 +18,10 @@ module.exports = {
 
       await template.generate({
         template: 'nuxt-plugin.ejs',
-        target: `${RELATIVE_ROOT_PROJECT}/plugins/boia.ts`,
+        target: `${RELATIVE_ROOT_PROJECT}/plugins/design-system.ts`,
       })
 
-      spinnerPlugin.succeed(`Plugin created in [/plugins/boia.ts]!`)
+      spinnerPlugin.succeed(`Plugin created in [/plugins/design-system.ts]!`)
 
       runtime?.run('generate:types --nuxt')
     } else {
@@ -29,17 +29,17 @@ module.exports = {
 
       await template.generate({
         template: 'vue-plugin.ejs',
-        target: `${RELATIVE_ROOT_PROJECT}/src/plugins/boia.ts`,
+        target: `${RELATIVE_ROOT_PROJECT}/src/plugins/design-system.ts`,
       })
 
-      spinnerPlugin.succeed(`Plugin created in [/src/plugins/boia.ts]!`)
+      spinnerPlugin.succeed(`Plugin created in [/src/plugins/design-system.ts]!`)
 
       
       runtime?.run('generate:types')
       
       info('Please, add command below to src/main.ts')
-      highlight(`import boia from 'plugins/boia'`)
-      highlight(`createApp(App).use(boia)`)
+      highlight(`import design-system from 'plugins/design-system'`)
+      highlight(`createApp(App).use(design-system)`)
     }
 
     const spinnerWindi = spin('Setting plugin')

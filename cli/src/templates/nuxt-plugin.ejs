@@ -1,8 +1,8 @@
 import { defineNuxtPlugin } from '#app';
 
-import { install as boia } from '@pescarte/boia'
-import '@pescarte/boia/dist/style.css'
+import { install as design-system } from '@pescarte/design-system'
+import '@pescarte/design-system/dist/style.css'
 
 export default defineNuxtPlugin(({ vueApp }) => {
-  vueApp.use(boia)
+  vueApp.use(design-system)
 })

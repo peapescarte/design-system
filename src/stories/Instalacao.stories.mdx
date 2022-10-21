@@ -1,0 +1,45 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Introdução/Instalaçao" />
+
+# Instalação
+
+Para instalar o *DesignSystem* basta executar:
+
+```bash dark
+yarn add @pescarte/design-system
+```
+
+e colocar no `scripts` dentro do `package.json` para ter acesso ao nosso CLI:
+
+```json dark
+"design-system-cli": "design-system-cli"
+```
+
+
+# Configuração
+
+Para configurar o *DesignSystem* globalmente basta seguir as instruções de acordo com o tipo do seu projeto, se for `Vue 3 - vite` ou `Nuxt 3`.
+
+## Vue 3 - Vite
+Executar o comando abaixo:
+
+```bash dark
+yarn design-system-cli generate:plugin
+```
+
+atualemnte é necessário colocar manualmente no `src/main.ts` o *import* e `use` do design-system:
+
+```ts dark
+// src/main.ts
+// Importar o plugin criado automaticamente.
+import design-system from './plugins/design-system'
+
+createApp(App).use(design-system) // Adcionar o design-system ao vue
+```
+
+## Nuxt 3
+Se você esta utilizando `Nuxt 3` o processo é mais automatizado, bastando executar:
+```bash dark
+yarn design-system-cli generate:plugin --nuxt
+```

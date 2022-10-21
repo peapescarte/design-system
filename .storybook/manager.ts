@@ -1,5 +1,5 @@
 import { addons } from '@storybook/addons'
-import girassol from './girasol-theme'
+import girassol from './pescarte-theme'
 
 
 

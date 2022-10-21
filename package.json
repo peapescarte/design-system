@@ -1,6 +1,6 @@
 {
-  "name": "@pescarte/boia",
-  "description": "Boia design system",
+  "name": "@pescarte/design-system",
+  "description": "DesignSystem design system",
   "version": "0.1.0",
   "license": "BSD-3-Clause",
   "authors": [
@@ -23,14 +23,14 @@
     "*.ts"
   ],
   "bin": {
-    "boia-cli": "./cli/bin/boia-cli"
+    "design-system-cli": "./cli/bin/design-system-cli"
   },
-  "main": "./dist/boia.umd.js",
-  "module": "./dist/boia.es.js",
+  "main": "./dist/design-system.umd.js",
+  "module": "./dist/design-system.es.js",
   "exports": {
     ".": {
-      "import": "./dist/boia.es.js",
-      "require": "./dist/boia.umd.js"
+      "import": "./dist/design-system.es.js",
+      "require": "./dist/design-system.umd.js"
     },
     "./dist/style.css": "./dist/style.css",
     "./windi.config.ts": "./windi.config.ts"
@@ -43,7 +43,7 @@
     "preview": "vite preview",
     "lint": "eslint src/ --resolve-plugins-relative-to .",
     "lint:fix": "eslint src/ --fix --resolve-plugins-relative-to .",
-    "boia-cli": "cli/bin/boia-cli",
+    "design-system-cli": "cli/bin/design-system-cli",
     "test": "vitest run",
     "test:w": "vitest watch --silent ",
     "test:coverage": "vitest run --silent --coverage",
@@ -125,13 +125,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/peapescarte/boia"
+    "url": "https://github.com/peapescarte/design-system"
   },
   "keywords": [
     "vue 3",
     "Components",
     "PEA Pescarte",
-    "boia",
+    "design-system",
     "windicss",
     "design system",
     "vue",

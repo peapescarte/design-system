@@ -8,7 +8,7 @@ import Icons from 'unplugin-icons/vite'
 import Inspect from 'vite-plugin-inspect'
 import WindiCSS from 'vite-plugin-windicss'
 
-import BoiaComponentsTypes  from './vite-modules/generate-component-types'
+import DesignSystemComponentsTypes  from './vite-modules/generate-component-types'
 
 const currentPath = path.resolve(__dirname)
 
@@ -17,8 +17,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "boia",
-      fileName: (format) => `boia.${format}.js`,
+      name: "design-system",
+      fileName: (format) => `design-system.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],
@@ -58,7 +58,7 @@ export default defineConfig({
       scale: 1.0,
     }),
 
-    BoiaComponentsTypes(),
+    DesignSystemComponentsTypes(),
   ],
 
   optimizeDeps: {

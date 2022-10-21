@@ -1,11 +1,11 @@
 import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
 import { withDesign } from 'storybook-addon-designs'
 
-import <%- props.name %>  from './<%- props.name %>.vue'
+import InputText  from './InputText.vue'
 
 <Meta
-  title="Componentes/<%- props.folder %><%- props.name %>"
-  component={<%- props.name %>}
+  title="Componentes/forms/inputsInputText"
+  component={InputText}
   decorators={[withDesign]}
   parameters={{
     design: {
@@ -19,14 +19,14 @@ import <%- props.name %>  from './<%- props.name %>.vue'
 />
 
 export const Template = ({ label,...args }) => ({
-  components: { <%- props.name %> },
+  components: { InputText },
   setup() {
     return { args, label }
   },
-  template: `<<%- props.name %> v-bind="args" id="teste"></<%- props.name %>>`,
+  template: `<InputText v-bind="args" id="teste"></InputText>`,
 })
 
-# <%- props.name %>
+# InputText
 
 ## Melhores praticas
 
@@ -37,7 +37,7 @@ export const Template = ({ label,...args }) => ({
 ## Importar localmente
 
 ```js dark
-import { Pea<%- props.name %> } from '@pescarte/design-system'
+import { PeaInputText } from '@pescarte/design-system'
 ```
 
 ## Variants 
@@ -55,7 +55,7 @@ import { Pea<%- props.name %> } from '@pescarte/design-system'
 ## Exemplos de uso
 
 ```html dark
-<Pea<%- props.name %> id="just-test">Awesome component!</Pea<%- props.name %>>
+<PeaInputText id="just-test">Awesome component!</PeaInputText>
 ```
 
 ## Playground
